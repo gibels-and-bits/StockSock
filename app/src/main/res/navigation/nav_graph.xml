@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/nav_graph"
+    app:startDestination="@id/stockListFragment">
+
+  <fragment
+      android:id="@+id/stockListFragment"
+      android:name="com.yum.stocksock.stockList.ui.StockListFragment"
+      android:label="StockListFragment" >
+    <action
+        android:id="@+id/action_stockListFragment_to_stockDetailsFragment"
+        app:destination="@id/stockDetailsFragment" />
+  </fragment>
+  <fragment
+      android:id="@+id/stockDetailsFragment"
+      android:name="com.yum.stocksock.stockDetails.ui.StockDetailsFragment"
+      android:label="StockDetailsFragment" >
+    <argument
+        android:name="stockId"
+        app:argType="string" />
+  </fragment>
+</navigation>

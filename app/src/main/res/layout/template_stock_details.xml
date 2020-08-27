@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:parentTag="android.widget.ScrollView">
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/company_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@android:drawable/btn_star" />
+
+    <TextView
+        android:id="@+id/stock_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/roboto_condensed_bold"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/company_logo"
+        tools:text="Stock Name" />
+
+    <LinearLayout
+        android:id="@+id/data_row_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/stock_name">
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:fontFamily="@font/roboto_condensed_bold"
+          android:paddingEnd="8dp"
+          android:text="Stock Symbol:"
+          android:textSize="14sp" />
+
+      <TextView
+          android:id="@+id/stock_id"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_row="0"
+          android:layout_column="1"
+          android:textSize="14sp"
+          tools:text="YUM" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/data_row_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/data_row_1">
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:fontFamily="@font/roboto_condensed_bold"
+          android:paddingEnd="8dp"
+          android:text="Address:"
+          android:textSize="14sp" />
+
+      <TextView
+          android:id="@+id/address"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:singleLine="false"
+          android:textSize="14sp"
+          tools:text="12345 Super Long Street Address For Testing Rd., Chicago, IL 60606" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/data_row_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/data_row_2">
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:fontFamily="@font/roboto_condensed_bold"
+          android:paddingEnd="8dp"
+          android:text="Website:"
+          android:textSize="14sp" />
+
+      <TextView
+          android:id="@+id/website"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:autoLink="web"
+          android:textSize="14sp"
+          tools:text="http://www.yum.com" />
+    </LinearLayout>
+  </androidx.constraintlayout.widget.ConstraintLayout>
+</merge>
